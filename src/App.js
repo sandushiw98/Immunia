@@ -13,6 +13,8 @@ import Dashboard from '../src/Admin/Dashboard/Dashboard';
 import ViewCenter from '../src/Admin/ViewCenter/ViewCenter';
 import ViewParent from '../src/Admin/ViewParent/ViewParent';
 import Appointments from '../src/Admin/Appointments/Appointments';
+import AdminProfile from './Admin/AdminProfile/AdminProfile';
+import Reviews from '../src/Admin/Reviews/Reviews';
 
 function App() {
   return (
@@ -22,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/Signup" element={<Signup />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/newborn" element={<NewBorn />} />
           <Route path="/onemonth" element={<OneMonth />} />
           <Route path="/fourmonth" element={<FourMonth />} />
@@ -32,7 +34,10 @@ function App() {
           <Route path="/adminDashboard" element={<Dashboard />} />
           <Route path="/viewCenter" element={<ViewCenter />} />
           <Route path="/viewParent" element={<ViewParent />} />
-          <Route path="/Appointments" element={<Appointments />} />
+          <Route path="/appointments" element={<Appointments />} />
+          <Route path="/adminprofile" element={<AdminProfile />} />
+          <Route path="/Reviews" element={<Reviews />} />
+          
         </Routes>
       </BrowserRouter>
       <Footer />
