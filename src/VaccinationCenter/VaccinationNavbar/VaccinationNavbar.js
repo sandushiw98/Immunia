@@ -1,11 +1,11 @@
 import { Avatar, Button, Col, Dropdown, Row } from 'antd';
 import React from 'react';
-import './AdminNavbar.css';
+import './VaccinationNavbar.css';
 import logo from "../../assets/images/logonew.png";
 import { Link } from 'react-router-dom';
 import { UserOutlined } from '@ant-design/icons';
 
-const AdminNavbar = () => {
+const VaccinationNavbar = () => {
 
     const items = [
         {
@@ -46,65 +46,56 @@ const AdminNavbar = () => {
                 </Link>
             </Col>
             <Col span={2} className='nav-section'>
-                <Link to='../../viewCenter'>
-                    <Button>
-                        CENTERS
-                    </Button>
-                </Link>
-            </Col>
-            <Col span={2} className='nav-section'>
-                <Link to='../../viewParent'>
-                    <Button>
-                        PARENTS
-                    </Button>
-                </Link>
-            </Col>
-            <Col span={2} className='nav-section'>
-            <Link to='../../AdminDonations'>
-                <Button>
-                    DONATIONS
-                </Button>
-                </Link>
-            </Col>
-            <Col span={2} className='nav-section'>
-                <Button>
-                    NOTIFICATIONS
-                </Button>
-            </Col>
-            <Col span={2} className='nav-section'>
-                <Link to='../../Appointments'>
+                <Link to='../../ParentAppointment'>
                     <Button>
                         APPOINMENTS
                     </Button>
                 </Link>
             </Col>
             <Col span={2} className='nav-section'>
-                <Link to='../../Reviews'>
+                <Link to='../../ParentChildAccount'>
                     <Button>
-                        REVIEWS
+                        CHILDREN
                     </Button>
                 </Link>
             </Col>
-            <Col span={5} className='nav-section-name'>
+            <Col span={2} className='nav-section'>
+                <Button>
+                  CENTERS
+                </Button>
+            </Col>
+            
+            <Col span={2} className='nav-section'>
+                <Button>
+                    NOTIFICATIONS
+                </Button>
+            </Col>
+           
+            {/* <Col span={2} className='nav-section'>
+                <Button>
+                    RECORDS
+                </Button>
+            </Col> */}
+           
+            <Col span={9} className='nav-section-name'>
                 <Link to='/adminprofile'>
                     <span style={{ fontWeight: '500', fontSize: '16px', color: 'black' }}>Sandushi Weraduwa</span>
                 </Link>
 
-                </Col>
-                
-                <Col span={1} className='nav-section-img'>
-                    <Dropdown
-                        menu={{
-                            items,
-                        }}
-                        placement="bottomRight"
-                    >
-                        <Avatar size={48} icon={<UserOutlined />} />
-                    </Dropdown>
-                </Col>
-            </Row>
+            </Col>
+            <Col span={1} className='nav-section-img'>
+                <Dropdown
+                    menu={{
+                        items,
+                    }}
+                    placement="bottomRight"
+                >
+                    <Avatar size={48} icon={<UserOutlined />} />
+                </Dropdown>
+            </Col>
+        </Row>
         </div>
     );
 };
 
-export default AdminNavbar;
+export default VaccinationNavbar;
